@@ -13,12 +13,8 @@ namespace Health
 {
     public partial class AdicionarConsulta : Form
     {
-        //isto trabalha????
-        //
-        //
-        //
-        //
         int sns;
+        Dados d = new Dados();
         public AdicionarConsulta()
         {
             InitializeComponent();
@@ -31,7 +27,7 @@ namespace Health
 
         private void AdicionarConsulta_Load(object sender, EventArgs e)
         {
-            Dados d = new Dados();
+           
 
             sns = Health.Properties.Settings.Default.SNS;
             Utente u = d.getUtente(sns);
@@ -44,13 +40,52 @@ namespace Health
 
             textBox7.Text = (numConslt + 1).ToString();
 
-
+            List<Proficiencia> proficiencias = d.getProficiencias();
+            List<string> nomeProfcs= new List<string>();
+            nomeProfcs.Add("Selecione uma proficiencia ");
+            foreach (Proficiencia item in proficiencias)
+            {
+                nomeProfcs.Add(item.Nome);
+            }
+            comboBox2.DataSource = nomeProfcs;
 
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string proficiencia = comboBox2.SelectedItem.ToString();
+             List<Medico> medicos= new List<Medico>();
+             comboBox1.Items.Clear();
+            if (proficiencia != "Selecione uma proficiencia") {
+                    
+                medicos = d.getMedicoProficiencia(proficiencia);
+
+                foreach (Medico item in medicos)
+                {
+                    comboBox1.Items.Add(item.Nome);
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string nomeMedico= comboBox1.SelectedItem.ToString();
+            int sns = Convert.ToInt32(textBox2.Text);
+            DateTime data = dateTimePicker1.Value;
+            TimeSpan ts = new TimeSpan(Convert.ToInt32(textHora.Text), Convert.ToInt32(textMin.Text), 0);
+            data = data.Date + ts;
+
+            d.AdicionarConsulta(nomeMedico, data, sns);
         }
     }
 }

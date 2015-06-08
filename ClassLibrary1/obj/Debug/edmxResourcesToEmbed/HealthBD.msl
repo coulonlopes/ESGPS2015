@@ -31,6 +31,9 @@
           <ScalarProperty Name="DataNasc" ColumnName="DataNasc" />
           <ScalarProperty Name="Sns" ColumnName="Sns" />
           <ScalarProperty Name="MedicoId" ColumnName="MedicoId" />
+          <ScalarProperty Name="BICC" ColumnName="BICC" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -59,6 +59,9 @@
     <NavigationProperty Name="Medico" Relationship="HealthBD.MedicoUtente" FromRole="Utente" ToRole="Medico" />
     <Property Name="MedicoId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Consultas" Relationship="HealthBD.UtenteConsulta" FromRole="Utente" ToRole="Consulta" />
+    <Property Name="BICC" Type="Int32" Nullable="false" />
+    <Property Name="CodigoPostal" Type="Int32" Nullable="false" />
+    <Property Name="Telefone" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Proficiencia">
     <Key>
@@ -127,7 +130,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="MedicoProficiencia">
-    <End Type="HealthBD.Medico" Role="Medico" Multiplicity="1" />
+    <End Type="HealthBD.Medico" Role="Medico" Multiplicity="*" />
     <End Type="HealthBD.Proficiencia" Role="Proficiencia" Multiplicity="1" />
   </Association>
   <Association Name="MedicoLogIn">

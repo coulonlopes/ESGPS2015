@@ -67,6 +67,30 @@ namespace ClassLibrary1
             return logIn;
         }
 
+        public List<Proficiencia> getProficiencias()
+        {
+            List<Proficiencia> proficiencias = model.Proficiencias.ToList();
+
+            return proficiencias;
+
+        }
+
+        public List<Medico> getMedicoProficiencia(string proficiencia)
+        {
+
+            List<Medico> medicos = model.Medicos.Where(i=> i.Proficiencia.Nome== proficiencia).ToList();
+
+            return medicos;
+        }
+
+        //public Medico getMedico(string nomeMedico)
+        //{
+        //    Medico m = model.Medicos.Where(i=> i.Nome== nomeMedico).First();
+        //    return m;
+
+        //}
+
+
         public static string AdicionarProficiencia(ProficienciaClass proficiencia)
         {
             string res = String.Empty;
@@ -261,6 +285,40 @@ namespace ClassLibrary1
                 res = ex.ToString();
             }
             return res;
+
+        }
+
+        public void RegistarUtt(UtenteClass ut)
+        {
+            Utente u = new Utente();
+            u.BICC = ut.BICC1;
+            u.Nome = ut.Nome;
+            u.Sns = ut.Sns;
+            u.Telefone = ut.Telefone;
+            u.Morada = ut.Morada;
+            u.CodigoPostal = ut.Cp;
+
+            model.Utentes.Add(u);
+            model.SaveChanges();
+        }
+
+        public void AdicionarConsulta(string nomeMedico , DateTime data, int sns)
+        {
+         Medico m = model.Medicos.Where(i=> i.Nome== nomeMedico).First();
+            Utente u= getUtente(sns);
+
+
+            Consulta c = new Consulta();
+            c.Medico = m;
+            c.Utente = u;
+            c.Data = data;
+            c.Estado = "A";
+            c.Diagnostico = " ";
+            c.Sintomas = " ";
+           
+
+            model.Consultas.Add(c);
+            model.SaveChanges();
 
         }
     }

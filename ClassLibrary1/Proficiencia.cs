@@ -14,10 +14,15 @@ namespace ClassLibrary1
     
     public partial class Proficiencia
     {
+        public Proficiencia()
+        {
+            this.Medico = new HashSet<Medico>();
+        }
+    
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
     
-        public virtual Medico Medico { get; set; }
+        public virtual ICollection<Medico> Medico { get; set; }
     }
 }

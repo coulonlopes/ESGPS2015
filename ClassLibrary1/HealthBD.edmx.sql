@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/29/2015 12:04:12
--- Generated from EDMX file: C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\ClassLibrary1\HealthBD.edmx
+-- Date Created: 06/08/2015 17:42:05
+-- Generated from EDMX file: C:\Users\Suporte DEI\Desktop\EGPS\ClassLibrary1\HealthBD.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,20 +17,20 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_HelpDeskLogIn]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[HelpDesks] DROP CONSTRAINT [FK_HelpDeskLogIn];
+IF OBJECT_ID(N'[dbo].[FK_MedicoUtente]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Utentes] DROP CONSTRAINT [FK_MedicoUtente];
 GO
 IF OBJECT_ID(N'[dbo].[FK_MedicoConsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consultas] DROP CONSTRAINT [FK_MedicoConsulta];
 GO
-IF OBJECT_ID(N'[dbo].[FK_MedicoLogIn]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Medicos] DROP CONSTRAINT [FK_MedicoLogIn];
-GO
 IF OBJECT_ID(N'[dbo].[FK_MedicoProficiencia]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Medicos] DROP CONSTRAINT [FK_MedicoProficiencia];
 GO
-IF OBJECT_ID(N'[dbo].[FK_MedicoUtente]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Utentes] DROP CONSTRAINT [FK_MedicoUtente];
+IF OBJECT_ID(N'[dbo].[FK_MedicoLogIn]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Medicos] DROP CONSTRAINT [FK_MedicoLogIn];
+GO
+IF OBJECT_ID(N'[dbo].[FK_HelpDeskLogIn]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[HelpDesks] DROP CONSTRAINT [FK_HelpDeskLogIn];
 GO
 IF OBJECT_ID(N'[dbo].[FK_UtenteConsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consultas] DROP CONSTRAINT [FK_UtenteConsulta];
@@ -40,15 +40,6 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[Consultas]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Consultas];
-GO
-IF OBJECT_ID(N'[dbo].[HelpDesks]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[HelpDesks];
-GO
-IF OBJECT_ID(N'[dbo].[LogIns]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[LogIns];
-GO
 IF OBJECT_ID(N'[dbo].[Medicos]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Medicos];
 GO
@@ -57,6 +48,15 @@ IF OBJECT_ID(N'[dbo].[Proficiencias]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Utentes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Utentes];
+GO
+IF OBJECT_ID(N'[dbo].[Consultas]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Consultas];
+GO
+IF OBJECT_ID(N'[dbo].[HelpDesks]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[HelpDesks];
+GO
+IF OBJECT_ID(N'[dbo].[LogIns]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LogIns];
 GO
 
 -- --------------------------------------------------
@@ -67,7 +67,7 @@ GO
 CREATE TABLE [dbo].[Medicos] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
-    [Cedula] nvarchar(max)  NOT NULL,
+    [Cedula] int  NOT NULL,
     [Nif] int  NOT NULL,
     [CheckIn] datetime  NOT NULL,
     [CheckOut] datetime  NOT NULL,
@@ -91,7 +91,10 @@ CREATE TABLE [dbo].[Utentes] (
     [Morada] nvarchar(max)  NOT NULL,
     [DataNasc] datetime  NOT NULL,
     [Sns] int  NOT NULL,
-    [MedicoId] int  NOT NULL
+    [MedicoId] int  NOT NULL,
+    [BICC] int  NOT NULL,
+    [CodigoPostal] int  NOT NULL,
+    [Telefone] int  NOT NULL
 );
 GO
 
