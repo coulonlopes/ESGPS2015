@@ -302,6 +302,7 @@ namespace ClassLibrary1
             model.SaveChanges();
         }
 
+<<<<<<< HEAD
         public void AdicionarConsulta(string nomeMedico , DateTime data, int sns)
         {
          Medico m = model.Medicos.Where(i=> i.Nome== nomeMedico).First();
@@ -316,6 +317,15 @@ namespace ClassLibrary1
             c.Diagnostico = " ";
             c.Sintomas = " ";
            
+=======
+        public void AdicionarConsulta(Consulta consulta)
+        {
+            Consulta c = new Consulta();
+            consulta.Utente.Nome = c.Utente.Nome;
+            consulta.Utente.Sns = c.Utente.Sns;
+            consulta.Medico.Nome = c.Medico.Nome;
+            consulta.Medico.Proficiencia = c.Medico.Proficiencia;
+>>>>>>> 5f5ce4486342cf00b64b5a37bceb4246eb06fb7a
 
             model.Consultas.Add(c);
             model.SaveChanges();
