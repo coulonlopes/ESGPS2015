@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="cd590165-0070-4702-a32b-bdf99f72ca2d" name="UMLUseCaseDiagram1" linkedPackageId="04d357c4-79a6-47bd-9280-8938fe470437" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="bdc9083b-9aee-4a8f-99c0-c5d8c1c842b6">
+      <profileInstance Id="38186441-c576-4452-8ec3-46c03b921549" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7e1ce35d-098b-4d69-bc69-d1fb0efac198">
+      <profileInstance Id="761f309b-f207-4656-9a96-25e8e20c7596" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="04398b94-4870-497c-8ff6-4af4e7c027ea" name="Profissional Helpdesk" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b3288f22-ae50-42d2-801e-d92728c81546" />
+        <targetEnds>
+          <association Id="084a7225-6358-4612-91ae-a9b4afe3037f" isDerived="false" sourceEndRoleName="Profissional Helpdesk" targetEndRoleName="Adicionar Médico" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a4f726d1-03cf-4a38-bb1c-279ca4451ec2" LastKnownName="Adicionar Médico" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b642df8-eab7-477c-9831-cdcb3d64781d" name="Profissional Helpdesk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ad6581ac-f3f4-4445-a57e-1cc7714e51fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f2e0eae5-2825-4aad-addb-22250bc41c0d" name="Adicionar Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0920152f-2ab4-41c8-8829-eed2dab98eae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6ced576f-2e55-4737-a4ba-8c862a751cd3" />
+          </association>
+          <association Id="15986fd2-d765-40a0-9ff6-0803c862b3e6" isDerived="false" sourceEndRoleName="Profissional Helpdesk" targetEndRoleName="Procurar Proficiência" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="43f0f1a1-a5a8-456d-8791-3681c33ee148" LastKnownName="Procurar Proficiência" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9e657e8e-f5d7-416a-947b-27237a065acd" name="Profissional Helpdesk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="705d40c2-146e-438e-8ec2-3c6cc228bc61" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95f54b75-c2ee-4f0e-9330-7bf6d5f3f830" name="Procurar Proficiência" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="59233245-b175-4fd3-a890-2cc9f78cbcef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e2317bf9-ea76-44ef-991d-9b18665bd449" />
+          </association>
+          <association Id="76f2c7cf-d74a-464f-be28-566a8a05f2cc" isDerived="false" sourceEndRoleName="Profissional Helpdesk" targetEndRoleName="Adicionar Proficiência " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b21a97ea-e0d9-4af3-86df-b5e76d4a9ea9" LastKnownName="Adicionar Proficiência " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f8590258-59c7-4f6d-8286-2c420ff04fb4" name="Profissional Helpdesk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3b6a84be-4715-4819-8d0e-05828612c64b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0f56f705-75aa-4641-860d-e63d7cea0fd0" name="Adicionar Proficiência " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a8539574-444c-4eb6-86bd-26af32d4dd37" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="67604f5a-e14c-40cb-830a-38b10e58cda8" />
+          </association>
+          <association Id="76400ae2-47d7-4b2b-984b-17b438feaecf" isDerived="false" sourceEndRoleName="Profissional Helpdesk" targetEndRoleName="Atualizar Proficiência " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="134e7a66-08be-40b1-944e-5dfcccb6146b" LastKnownName="Atualizar Proficiência " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4befb1d8-7ac4-41f2-b50c-5291ecbb3b21" name="Profissional Helpdesk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3c8db4df-f5dd-4d4d-806c-97df8479775c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5908a2b2-ee23-494f-8ac1-72bbf2a7b54d" name="Atualizar Proficiência " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b0fa055f-f721-4a2d-a243-8cbc36e67bc7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e68674de-5136-4e96-9ee4-ab8ee353e46f" />
+          </association>
+          <association Id="19199d5b-a073-4721-991e-38315af4642e" isDerived="false" sourceEndRoleName="Profissional Helpdesk" targetEndRoleName="Alteração de Consulta " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0d153de5-7058-44f8-82df-5c3623eb9dfd" LastKnownName="Alteração de Consulta " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7449c50b-3c03-4b20-b770-2ae0ddca4412" name="Profissional Helpdesk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="40c7534c-02d0-4380-97d1-72bab9038a83" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e6cc581-c39a-4b9d-8271-c08ce8b92d01" name="Alteração de Consulta " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="29594684-288f-4bed-9661-7b2d9e6655e6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="19d14fe1-a3cd-49c5-8324-b947d225a296" />
+          </association>
+          <association Id="56fb14b9-3a9a-43a0-8e05-1bca35726ff9" isDerived="false" sourceEndRoleName="Profissional Helpdesk" targetEndRoleName="Visualização Detalhes de Consulta " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="40c4bf1f-2483-44a9-8572-c201e809780a" LastKnownName="Visualização Detalhes de Consulta " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e8765087-bb4c-440e-a48c-e20177cdb084" name="Profissional Helpdesk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dcd0d222-8ac9-401f-bf5a-f2877846c596" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="17ed31a0-7bb0-49bc-94fb-df54576d4930" name="Visualização Detalhes de Consulta " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1a81b167-c516-43ff-a0e6-d65090dca185" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5a8c29e8-23c4-4cef-b8f5-61605b6ae915" />
+          </association>
+          <association Id="5041ce6b-a869-468d-a145-5af52c893a89" isDerived="false" sourceEndRoleName="Profissional Helpdesk" targetEndRoleName="Pesquisa de Consultas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d4894bd4-f823-4fe5-8172-5b2cfa5202ff" LastKnownName="Pesquisa de Consultas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="00e23096-5efc-4828-916f-bc4ae8799582" name="Profissional Helpdesk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="146c0691-06ef-4098-8603-c9f4624678ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="75587e29-0acc-4ac8-b6cb-4c1cca061e5a" name="Pesquisa de Consultas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="521fb481-f2f1-4722-a383-7b4f5e3bfe53" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="65cc3f6a-329d-4a79-a7c1-1e570733d10a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="6238407e-e565-4102-af52-06efae4bd200" name="Medico" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1fc9d6aa-7f13-48e3-80f6-4044719b6185" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a4f726d1-03cf-4a38-bb1c-279ca4451ec2" name="Adicionar Médico" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ef303bf2-5cb2-4377-af63-58d95ffa417c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b21a97ea-e0d9-4af3-86df-b5e76d4a9ea9" name="Adicionar Proficiência " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bb178682-2880-491d-87ad-cf96e8d7f394" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="134e7a66-08be-40b1-944e-5dfcccb6146b" name="Atualizar Proficiência " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="94480a7f-2394-4f21-b18b-30fdbceab180" />
+        <additions>
+          <include Id="e28f0003-c089-4d1f-896a-e753007e1c4a">
+            <useCaseMoniker Id="43f0f1a1-a5a8-456d-8791-3681c33ee148" LastKnownName="Procurar Proficiência" />
+            <elementDefinition Id="cc278e54-fd79-4aaf-89cd-1df45cf4da2c" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="43f0f1a1-a5a8-456d-8791-3681c33ee148" name="Procurar Proficiência" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8fd2c251-9516-4945-ab07-c654507b7cf1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d4894bd4-f823-4fe5-8172-5b2cfa5202ff" name="Pesquisa de Consultas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="41fe1601-f148-4752-a78e-81015b7a4195" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0d153de5-7058-44f8-82df-5c3623eb9dfd" name="Alteração de Consulta " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26af4607-bc2c-45bb-8ffc-ae0931ae9e9a" />
+        <additions>
+          <include Id="b5aae6dc-96f7-4684-93d4-3b4185c3109b">
+            <useCaseMoniker Id="507c282b-898d-48cc-a4be-d12aac19d619" LastKnownName="Verificação de Consulta" />
+            <elementDefinition Id="beb19020-27c8-4267-ac74-cf115b74b4c2" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="40c4bf1f-2483-44a9-8572-c201e809780a" name="Visualização Detalhes de Consulta " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="94a9af3f-951f-4315-a9b0-6e059ec781e1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="507c282b-898d-48cc-a4be-d12aac19d619" name="Verificação de Consulta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1bf3811f-f4c0-4e4d-ba9d-5e6079bf6162" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="04d357c4-79a6-47bd-9280-8938fe470437" name="ModelingProject1">
+    <elementDefinition Id="d494ef71-2bda-4475-96b6-90641dcea574" />
+  </package>
+</useCaseModelRoot>
