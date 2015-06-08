@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary1;
+
 
 namespace Health
 {
@@ -15,6 +17,13 @@ namespace Health
         public AdicionarProficiencia()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProficienciaClass m = new ProficienciaClass(textBox2.Text, richTextBox1.Text);
+            MessageBox.Show(Dados.AdicionarProficiencia(m));
+            this.Close();
         }
     }
 }

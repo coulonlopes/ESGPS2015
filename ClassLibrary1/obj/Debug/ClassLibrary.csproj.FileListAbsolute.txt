@@ -8,3 +8,13 @@ C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\Clas
 C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\ClassLibrary1\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\bin\Debug\EntityFramework.dll
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\bin\Debug\EntityFramework.xml
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

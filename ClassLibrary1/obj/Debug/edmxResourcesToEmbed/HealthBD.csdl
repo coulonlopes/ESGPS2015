@@ -38,7 +38,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="Cedula" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Cedula" Type="Int32" Nullable="false" />
     <Property Name="Nif" Type="Int32" Nullable="false" />
     <Property Name="CheckIn" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="CheckOut" Type="DateTime" Nullable="false" Precision="3" />
@@ -74,7 +74,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Data" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Estado" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Sintomas" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Diagnostico" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\ClassLibrary1\HealthBD.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\July\Desktop\ESGPS2015\ClassLibrary1\HealthBD.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

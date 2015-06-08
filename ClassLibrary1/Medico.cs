@@ -22,7 +22,7 @@ namespace ClassLibrary1
     
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Cedula { get; set; }
+        public int Cedula { get; set; }
         public int Nif { get; set; }
         public System.DateTime CheckIn { get; set; }
         public System.DateTime CheckOut { get; set; }

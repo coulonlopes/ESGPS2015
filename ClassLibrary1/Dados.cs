@@ -66,5 +66,202 @@ namespace ClassLibrary1
             }
             return logIn;
         }
+
+        public static string AdicionarProficiencia(ProficienciaClass proficiencia)
+        {
+            string res = String.Empty;
+            try
+            {
+                using (var context = new HealthBDContainer())
+                {
+                    Proficiencia h = new Proficiencia
+                    {
+                        Nome = proficiencia.Nome,
+                        Descricao = proficiencia.Descricao
+
+                    };
+                    context.Proficiencias.Add(h);
+                    context.SaveChanges();
+                    res = "Adicionado com sucs…";
+                }
+            }
+            catch (Exception ex)
+            {
+                res = "erro…" + ex.InnerException.Message;
+            } return res;
+        }
+
+        public static string AdicionarMedico(MedicoClass medico)
+        {
+            string res = String.Empty;
+            try
+            {
+                using (var context = new HealthBDContainer())
+                {
+                    HelpDesk h = new HelpDesk
+                    {
+                        Nome = "Jussara"
+                    };
+
+                    LogIn log = PesquisarLogin("Jussara");
+                    Proficiencia p = PesquisarProficiencia("pediatria");
+                    Medico med = new Medico
+                    {
+                        Nome = medico.Nome,
+                        Cedula = medico.Identificacao,
+                        Nif = medico.Nif,
+                        CheckIn = medico.CheckIn,
+                        CheckOut = medico.CheckOut,
+
+                    };
+
+                    med.Proficiencia = p;
+                    med.LogIn = log;
+                    h.LogIn = log;
+                    log.HelpDesk = h;
+
+
+                    context.Medicos.Add(med);
+                    context.SaveChanges();
+                    res = "Adicionado com sucs…";
+                }
+            }
+            catch (Exception ex)
+            {
+                res = "erro…" + ex.InnerException.Message;
+            } return res;
+        }
+
+
+
+        public static string Adicionar(MedicoClass medico)
+        {
+            string res = String.Empty;
+            try
+            {
+                using (var context = new HealthBDContainer())
+                {
+                    HelpDesk h = new HelpDesk
+                    {
+                        Nome = "Jussara"
+
+
+                        //Address = "Leiria"
+                    };
+                    LogIn l = new LogIn
+                    {
+                        Username = "Jussara",
+                        Password = "pass",
+                        Tipo = "blabla"
+
+                        //Address = "Leiria"
+                    };
+                    Medico m = new Medico
+                    {
+                        Nome = "Jussara",
+                        Cedula = 1234,
+                        Nif = 1234,
+                        CheckIn = DateTime.Now,
+                        CheckOut = DateTime.Now
+
+                        //Address = "Leiria"
+                    };
+                    Proficiencia p = new Proficiencia
+                    {
+                        Nome = "Proficiencia teste",
+                        Descricao = "Descriçao teste"
+
+                        //Address = "Leiria"
+                    };
+                    context.LogIns.Add(l);
+                    context.Medicos.Add(m);
+                    h.LogIn = l;
+                    l.HelpDesk = h;
+                    l.Medico = m;
+                    //  m.Proficiencia = p;
+
+
+                    context.Proficiencias.Add(p);
+                    context.SaveChanges();
+                    res = "Added…";
+                }
+            }
+            catch (Exception ex)
+            {
+                res = "erro…" + ex.Message;
+            } return res;
+        }
+
+
+        public static Proficiencia PesquisarProficiencia(String nomeProficiencia)
+        {
+            Proficiencia p;
+            using (var context = new HealthBDContainer())
+            {
+                p = context.Proficiencias.First(i => i.Nome == nomeProficiencia);
+            }
+
+            return p;
+        }
+
+        public static List<String> listarProficienciasNome()
+        {
+            List<String> proficiencias = new List<string>();
+            using (var context = new HealthBDContainer())
+            {
+                try
+                {
+                    var query = from proficiencia in context.Proficiencias
+                                select new
+                                {
+                                    nome = proficiencia.Nome
+                                };
+
+                    foreach (var categoryInfo in query)
+                    {
+                        proficiencias.Add(categoryInfo.nome);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            } return proficiencias;
+
+        }
+
+        public static LogIn PesquisarLogin(String username)
+        {
+            LogIn login;
+            using (var context = new HealthBDContainer())
+            {
+                login = context.LogIns.First(i => i.Username == username);
+            }
+
+            return login;
+        }
+
+        public static string AtualizarProficiencia(String nomeP, String descricao, string nome)
+        {
+            Proficiencia p;
+            String res = String.Empty;
+            try
+            {
+                using (var context = new HealthBDContainer())
+                {
+                    p = context.Proficiencias.First(i => i.Nome == nomeP);
+                    p.Nome = nome;
+                    p.Descricao = descricao;
+                    context.SaveChanges();
+                    res = "Proficiencia atualizada com sucesso!";
+                }
+            }
+            catch (Exception ex)
+            {
+                res = ex.ToString();
+            }
+            return res;
+
+        }
     }
 }

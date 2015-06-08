@@ -160,3 +160,29 @@ C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\Heal
 C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\Health\obj\Debug\Health.csproj.GenerateResource.Cache
 C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\Health\obj\Debug\Health.exe
 C:\Users\Suporte DEI\Desktop\3fase\Modeling_Project _2Fase\ModelingProject1\Health\obj\Debug\Health.pdb
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\Health.exe.config
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.exe
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.pdb
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.csprojResolveAssemblyReference.cache
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.MenuMedico.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.PesquisarProficiencia.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.AdicionarConsulta.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.AdicionarMedico.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.AdicionarProficiencia.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.AdicionarUtente.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.Form1.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.HelpdeskMenu.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.HelpDeskMenuMed.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.HelpDeskMenuUtt.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.LogIn.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.Properties.Resources.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.RegistarUtt.resources
+C:\Users\July\Desktop\ESGPS2015\Health\obj\Debug\Health.csproj.GenerateResource.Cache
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\Health.exe
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\Health.pdb
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\ClassLibrary1.dll
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\EntityFramework.dll
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\ClassLibrary1.pdb
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\EntityFramework.xml
+C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\EntityFramework.SqlServer.xml
