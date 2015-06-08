@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HealthBD.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HealthBDStoreContainer">
+    <EntitySet Name="Medicos" EntityType="HealthBD.Store.Medicos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proficiencias" EntityType="HealthBD.Store.Proficiencias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Utentes" EntityType="HealthBD.Store.Utentes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Consultas" EntityType="HealthBD.Store.Consultas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HelpDesks" EntityType="HealthBD.Store.HelpDesks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogIns" EntityType="HealthBD.Store.LogIns" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MedicoUtente" Association="HealthBD.Store.MedicoUtente">
+      <End Role="Medico" EntitySet="Medicos" />
+      <End Role="Utente" EntitySet="Utentes" />
+    </AssociationSet>
+    <AssociationSet Name="MedicoConsulta" Association="HealthBD.Store.MedicoConsulta">
+      <End Role="Medico" EntitySet="Medicos" />
+      <End Role="Consulta" EntitySet="Consultas" />
+    </AssociationSet>
+    <AssociationSet Name="MedicoProficiencia" Association="HealthBD.Store.MedicoProficiencia">
+      <End Role="Medico" EntitySet="Medicos" />
+      <End Role="Proficiencia" EntitySet="Proficiencias" />
+    </AssociationSet>
+    <AssociationSet Name="MedicoLogIn" Association="HealthBD.Store.MedicoLogIn">
+      <End Role="Medico" EntitySet="Medicos" />
+      <End Role="LogIn" EntitySet="LogIns" />
+    </AssociationSet>
+    <AssociationSet Name="HelpDeskLogIn" Association="HealthBD.Store.HelpDeskLogIn">
+      <End Role="HelpDesk" EntitySet="HelpDesks" />
+      <End Role="LogIn" EntitySet="LogIns" />
+    </AssociationSet>
+    <AssociationSet Name="UtenteConsulta" Association="HealthBD.Store.UtenteConsulta">
+      <End Role="Utente" EntitySet="Utentes" />
+      <End Role="Consulta" EntitySet="Consultas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Medicos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cedula" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nif" Type="int" Nullable="false" />
+    <Property Name="CheckIn" Type="datetime" Nullable="false" />
+    <Property Name="CheckOut" Type="datetime" Nullable="false" />
+    <Property Name="Proficiencia_Id" Type="int" Nullable="false" />
+    <Property Name="LogIn_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proficiencias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utentes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataNasc" Type="datetime" Nullable="false" />
+    <Property Name="Sns" Type="int" Nullable="false" />
+    <Property Name="MedicoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Consultas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sintomas" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Diagnostico" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MedicoId" Type="int" Nullable="false" />
+    <Property Name="UtenteId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HelpDesks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LogIn_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LogIns">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="MedicoUtente">
+    <End Role="Medico" Type="HealthBD.Store.Medicos" Multiplicity="1" />
+    <End Role="Utente" Type="HealthBD.Store.Utentes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medico">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Utente">
+        <PropertyRef Name="MedicoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MedicoConsulta">
+    <End Role="Medico" Type="HealthBD.Store.Medicos" Multiplicity="1" />
+    <End Role="Consulta" Type="HealthBD.Store.Consultas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medico">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="MedicoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MedicoProficiencia">
+    <End Role="Medico" Type="HealthBD.Store.Medicos" Multiplicity="*" />
+    <End Role="Proficiencia" Type="HealthBD.Store.Proficiencias" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Proficiencia">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medico">
+        <PropertyRef Name="Proficiencia_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MedicoLogIn">
+    <End Role="Medico" Type="HealthBD.Store.Medicos" Multiplicity="*" />
+    <End Role="LogIn" Type="HealthBD.Store.LogIns" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="LogIn">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medico">
+        <PropertyRef Name="LogIn_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HelpDeskLogIn">
+    <End Role="HelpDesk" Type="HealthBD.Store.HelpDesks" Multiplicity="*" />
+    <End Role="LogIn" Type="HealthBD.Store.LogIns" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="LogIn">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HelpDesk">
+        <PropertyRef Name="LogIn_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UtenteConsulta">
+    <End Role="Utente" Type="HealthBD.Store.Utentes" Multiplicity="1" />
+    <End Role="Consulta" Type="HealthBD.Store.Consultas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="UtenteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="HealthBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="HealthBDContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Medicos" EntityType="HealthBD.Medico" />
+          <EntitySet Name="Proficiencias" EntityType="HealthBD.Proficiencia" />
+          <EntitySet Name="Utentes" EntityType="HealthBD.Utente" />
+          <EntitySet Name="Consultas" EntityType="HealthBD.Consulta" />
+          <EntitySet Name="HelpDesks" EntityType="HealthBD.HelpDesk" />
+          <EntitySet Name="LogIns" EntityType="HealthBD.LogIn" />
+          <AssociationSet Name="MedicoUtente" Association="HealthBD.MedicoUtente">
+            <End Role="Medico" EntitySet="Medicos" />
+            <End Role="Utente" EntitySet="Utentes" />
+          </AssociationSet>
+          <AssociationSet Name="MedicoConsulta" Association="HealthBD.MedicoConsulta">
+            <End Role="Medico" EntitySet="Medicos" />
+            <End Role="Consulta" EntitySet="Consultas" />
+          </AssociationSet>
+          <AssociationSet Name="MedicoProficiencia" Association="HealthBD.MedicoProficiencia">
+            <End Role="Medico" EntitySet="Medicos" />
+            <End Role="Proficiencia" EntitySet="Proficiencias" />
+          </AssociationSet>
+          <AssociationSet Name="MedicoLogIn" Association="HealthBD.MedicoLogIn">
+            <End Role="Medico" EntitySet="Medicos" />
+            <End Role="LogIn" EntitySet="LogIns" />
+          </AssociationSet>
+          <AssociationSet Name="HelpDeskLogIn" Association="HealthBD.HelpDeskLogIn">
+            <End Role="HelpDesk" EntitySet="HelpDesks" />
+            <End Role="LogIn" EntitySet="LogIns" />
+          </AssociationSet>
+          <AssociationSet Name="UtenteConsulta" Association="HealthBD.UtenteConsulta">
+            <End Role="Utente" EntitySet="Utentes" />
+            <End Role="Consulta" EntitySet="Consultas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Cedula" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Nif" Type="Int32" Nullable="false" />
+          <Property Name="CheckIn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CheckOut" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Utentes" Relationship="HealthBD.MedicoUtente" FromRole="Medico" ToRole="Utente" />
+          <NavigationProperty Name="Consultas" Relationship="HealthBD.MedicoConsulta" FromRole="Medico" ToRole="Consulta" />
+          <NavigationProperty Name="Proficiencia" Relationship="HealthBD.MedicoProficiencia" FromRole="Medico" ToRole="Proficiencia" />
+          <NavigationProperty Name="LogIn" Relationship="HealthBD.MedicoLogIn" FromRole="Medico" ToRole="LogIn" />
+        </EntityType>
+        <EntityType Name="Utente">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Morada" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DataNasc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Sns" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Medico" Relationship="HealthBD.MedicoUtente" FromRole="Utente" ToRole="Medico" />
+          <Property Name="MedicoId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Consultas" Relationship="HealthBD.UtenteConsulta" FromRole="Utente" ToRole="Consulta" />
+        </EntityType>
+        <EntityType Name="Proficiencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Descricao" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Medico" Relationship="HealthBD.MedicoProficiencia" FromRole="Proficiencia" ToRole="Medico" />
+        </EntityType>
+        <EntityType Name="Consulta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Sintomas" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Diagnostico" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Medico" Relationship="HealthBD.MedicoConsulta" FromRole="Consulta" ToRole="Medico" />
+          <Property Name="MedicoId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Utente" Relationship="HealthBD.UtenteConsulta" FromRole="Consulta" ToRole="Utente" />
+          <Property Name="UtenteId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HelpDesk">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="LogIn" Relationship="HealthBD.HelpDeskLogIn" FromRole="HelpDesk" ToRole="LogIn" />
+        </EntityType>
+        <EntityType Name="LogIn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Tipo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Medico" Relationship="HealthBD.MedicoLogIn" FromRole="LogIn" ToRole="Medico" />
+          <NavigationProperty Name="HelpDesk" Relationship="HealthBD.HelpDeskLogIn" FromRole="LogIn" ToRole="HelpDesk" />
+        </EntityType>
+        <Association Name="MedicoUtente">
+          <End Type="HealthBD.Medico" Role="Medico" Multiplicity="1" />
+          <End Type="HealthBD.Utente" Role="Utente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Utente">
+              <PropertyRef Name="MedicoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MedicoConsulta">
+          <End Type="HealthBD.Medico" Role="Medico" Multiplicity="1" />
+          <End Type="HealthBD.Consulta" Role="Consulta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Consulta">
+              <PropertyRef Name="MedicoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MedicoProficiencia">
+          <End Type="HealthBD.Medico" Role="Medico" Multiplicity="1" />
+          <End Type="HealthBD.Proficiencia" Role="Proficiencia" Multiplicity="1" />
+        </Association>
+        <Association Name="MedicoLogIn">
+          <End Type="HealthBD.Medico" Role="Medico" Multiplicity="1" />
+          <End Type="HealthBD.LogIn" Role="LogIn" Multiplicity="1" />
+        </Association>
+        <Association Name="HelpDeskLogIn">
+          <End Type="HealthBD.HelpDesk" Role="HelpDesk" Multiplicity="1" />
+          <End Type="HealthBD.LogIn" Role="LogIn" Multiplicity="1" />
+        </Association>
+        <Association Name="UtenteConsulta">
+          <End Type="HealthBD.Utente" Role="Utente" Multiplicity="1" />
+          <End Type="HealthBD.Consulta" Role="Consulta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Utente">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Consulta">
+              <PropertyRef Name="UtenteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HealthBDStoreContainer" CdmEntityContainer="HealthBDContainer">
+    <EntitySetMapping Name="Medicos">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Medico)">
+        <MappingFragment StoreEntitySet="Medicos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Nif" ColumnName="Nif" />
+          <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proficiencias">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Proficiencia)">
+        <MappingFragment StoreEntitySet="Proficiencias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utentes">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Utente)">
+        <MappingFragment StoreEntitySet="Utentes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="DataNasc" ColumnName="DataNasc" />
+          <ScalarProperty Name="Sns" ColumnName="Sns" />
+          <ScalarProperty Name="MedicoId" ColumnName="MedicoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consultas">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Consulta)">
+        <MappingFragment StoreEntitySet="Consultas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Sintomas" ColumnName="Sintomas" />
+          <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+          <ScalarProperty Name="MedicoId" ColumnName="MedicoId" />
+          <ScalarProperty Name="UtenteId" ColumnName="UtenteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HelpDesks">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.HelpDesk)">
+        <MappingFragment StoreEntitySet="HelpDesks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogIns">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.LogIn)">
+        <MappingFragment StoreEntitySet="LogIns">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MedicoProficiencia" TypeName="HealthBD.MedicoProficiencia" StoreEntitySet="Medicos">
+      <EndProperty Name="Proficiencia">
+        <ScalarProperty Name="Id" ColumnName="Proficiencia_Id" />
+      </EndProperty>
+      <EndProperty Name="Medico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MedicoLogIn" TypeName="HealthBD.MedicoLogIn" StoreEntitySet="Medicos">
+      <EndProperty Name="LogIn">
+        <ScalarProperty Name="Id" ColumnName="LogIn_Id" />
+      </EndProperty>
+      <EndProperty Name="Medico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HelpDeskLogIn" TypeName="HealthBD.HelpDeskLogIn" StoreEntitySet="HelpDesks">
+      <EndProperty Name="LogIn">
+        <ScalarProperty Name="Id" ColumnName="LogIn_Id" />
+      </EndProperty>
+      <EndProperty Name="HelpDesk">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

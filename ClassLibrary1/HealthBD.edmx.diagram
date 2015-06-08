@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1af50237209241c5bea1cb180ce86ed4" Name="Diagram1" ZoomLevel="96" >
+        <EntityTypeShape EntityType="HealthBD.Medico" Width="1.5" PointX="1.375" PointY="1.375" />
+        <EntityTypeShape EntityType="HealthBD.Utente" Width="1.5" PointX="8" PointY="1.375" />
+        <EntityTypeShape EntityType="HealthBD.Proficiencia" Width="1.5" PointX="3.25" PointY="5.125" />
+        <EntityTypeShape EntityType="HealthBD.Consulta" Width="1.5" PointX="7.25" PointY="5.125" />
+        <EntityTypeShape EntityType="HealthBD.HelpDesk" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HealthBD.LogIn" Width="1.5" PointX="5.25" PointY="3.125" />
+        <AssociationConnector Association="HealthBD.MedicoUtente" />
+        <AssociationConnector Association="HealthBD.MedicoConsulta" />
+        <AssociationConnector Association="HealthBD.MedicoProficiencia" />
+        <AssociationConnector Association="HealthBD.MedicoLogIn" />
+        <AssociationConnector Association="HealthBD.HelpDeskLogIn" />
+        <AssociationConnector Association="HealthBD.UtenteConsulta" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

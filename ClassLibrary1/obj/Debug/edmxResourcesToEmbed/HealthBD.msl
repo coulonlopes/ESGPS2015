@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HealthBDStoreContainer" CdmEntityContainer="HealthBDContainer">
+    <EntitySetMapping Name="Medicos">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Medico)">
+        <MappingFragment StoreEntitySet="Medicos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Nif" ColumnName="Nif" />
+          <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proficiencias">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Proficiencia)">
+        <MappingFragment StoreEntitySet="Proficiencias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utentes">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Utente)">
+        <MappingFragment StoreEntitySet="Utentes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="DataNasc" ColumnName="DataNasc" />
+          <ScalarProperty Name="Sns" ColumnName="Sns" />
+          <ScalarProperty Name="MedicoId" ColumnName="MedicoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consultas">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.Consulta)">
+        <MappingFragment StoreEntitySet="Consultas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Sintomas" ColumnName="Sintomas" />
+          <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+          <ScalarProperty Name="MedicoId" ColumnName="MedicoId" />
+          <ScalarProperty Name="UtenteId" ColumnName="UtenteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HelpDesks">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.HelpDesk)">
+        <MappingFragment StoreEntitySet="HelpDesks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogIns">
+      <EntityTypeMapping TypeName="IsTypeOf(HealthBD.LogIn)">
+        <MappingFragment StoreEntitySet="LogIns">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MedicoProficiencia" TypeName="HealthBD.MedicoProficiencia" StoreEntitySet="Medicos">
+      <EndProperty Name="Proficiencia">
+        <ScalarProperty Name="Id" ColumnName="Proficiencia_Id" />
+      </EndProperty>
+      <EndProperty Name="Medico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MedicoLogIn" TypeName="HealthBD.MedicoLogIn" StoreEntitySet="Medicos">
+      <EndProperty Name="LogIn">
+        <ScalarProperty Name="Id" ColumnName="LogIn_Id" />
+      </EndProperty>
+      <EndProperty Name="Medico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HelpDeskLogIn" TypeName="HealthBD.HelpDeskLogIn" StoreEntitySet="HelpDesks">
+      <EndProperty Name="LogIn">
+        <ScalarProperty Name="Id" ColumnName="LogIn_Id" />
+      </EndProperty>
+      <EndProperty Name="HelpDesk">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

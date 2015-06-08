@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="c0e53bf3-bc9e-476c-a013-02640564c7e3" name="UMLClassDiagram1" linkedPackageId="cce63f35-decc-4596-b23a-b5c28268d367" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9883dc33-c428-4058-8b99-35e83eeaf9d1" name="Pessoa" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="db78fd38-58fd-461f-83ae-8d67decab9cd" />
+        <ownedAttributesInternal>
+          <property Id="c9cc9fd0-5d22-4dae-9bb1-bc0bb2ea795e" name="Nome" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="21b07a21-f5a9-42b2-8e68-af961a9a2705" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="dc6aa7bb-9626-4a20-8773-6beba6046d97" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="495d141a-db17-487c-9ae4-6115f34ba6c3" name="Identificacao" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="71507f09-3253-47bc-9b58-53554edfbe8a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e28fc7e1-9e3d-4eb6-9ff2-5f27896dbd62" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7db424f3-3e2c-4baa-bff5-87734b16b630" name="Funcionario" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="61502c78-6c8d-4a02-aa0d-0fb8d3c4289a" />
+        <generalsInternal>
+          <generalization Id="31736dae-ea52-41a3-82a1-2c5f34813e94" isSubstitutable="false">
+            <classMoniker Id="9883dc33-c428-4058-8b99-35e83eeaf9d1" LastKnownName="Pessoa" />
+            <elementDefinition Id="0133693e-cd26-48db-a621-1f7509b29e17" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d2d3d28e-6da2-45bd-9efd-a50318ea182e" name="Utente" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3f42c7b1-91b7-4002-aff2-3ade9b2cbcad" />
+        <generalsInternal>
+          <generalization Id="84a22076-7f11-40fd-94ff-f7476450358e" isSubstitutable="false">
+            <classMoniker Id="9883dc33-c428-4058-8b99-35e83eeaf9d1" LastKnownName="Pessoa" />
+            <elementDefinition Id="f4363c8e-aa5d-401c-97d9-13eedebcc033" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="e517ad3e-1502-4aa2-b871-ccf12a2f7e45" isDerived="false" sourceEndRoleName="Utente" targetEndRoleName="Consulta" isLeaf="false" name="&quot;participar&quot;" isAbstract="false">
+            <classMoniker Id="5d1d69b6-1c05-464a-8325-461c19766f93" LastKnownName="Consulta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b0f4607-e3ed-421c-b871-554145f37380" name="Utente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9cd107ad-78a1-445e-9555-792107122439" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="339273ec-80fd-47be-9f57-c814d887bc19" name="Consulta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="18aaf095-78ca-4678-a385-8da2593093d8" name="Lower" value="1">
+                      <elementDefinition Id="03f62bf8-aeeb-43de-a939-7253c84c0aa5" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="78accbd2-c85b-457c-9564-718b0087f438" name="Upper" value=".*">
+                      <elementDefinition Id="0997ae41-6442-4981-bb97-2e0e403cce64" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5467aa91-edd1-4a02-84ab-da61aa62c24c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9090f5e3-8438-499a-88e7-a9ec9719086a" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="472c1c0a-22da-4b70-a8b5-8f449eb58c27" name="dataNascimento" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="50d2af22-d294-4d46-bd6c-8da6d426cca8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f67efac3-6668-440a-8f53-a79087e2eccb" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="71002bb5-c34d-4893-9977-1aa295608d7f" name="sns" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7c37b3ec-ae3a-402d-afdf-6f6245449728" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c5d64ed5-704b-4f25-9c18-7d961b579ceb" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="fa18b996-29b6-4a60-b3e0-7b41550d8302" name="morada" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0c505fa2-f984-4dcd-a3c0-d7032f6e48d8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2e97fab5-beec-4240-bbe5-e9f470608ce2" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="32d25522-a5da-4635-b67a-ead2fd673d0d" name="codPostal" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f6e99dae-bd38-4ce0-857c-4fcdfb40f543" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c43b2f2b-c6ab-4258-8b5a-ad2c58f946f1" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="41ec5470-62be-4dbf-8e6f-65ee7f7549cb" name="Medico" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e459c936-6d4e-4a68-b3e0-57a7336f66c6" />
+        <generalsInternal>
+          <generalization Id="cadd1ecc-6d30-4656-9815-7891c02d16da" isSubstitutable="false">
+            <classMoniker Id="7db424f3-3e2c-4baa-bff5-87734b16b630" LastKnownName="Funcionario" />
+            <elementDefinition Id="75c97ac4-1f3b-4e41-8c84-81e26ff7c5da" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="0accebc0-b9b0-4f29-8a26-b3f0785cad91" isDerived="false" sourceEndRoleName="Medico" targetEndRoleName="Utente" isLeaf="false" name="&quot;ter&quot;" isAbstract="false">
+            <classMoniker Id="d2d3d28e-6da2-45bd-9efd-a50318ea182e" LastKnownName="Utente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59aafd6f-8ea9-422e-b95e-fda4c9b66fd5" name="Medico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5a76440e-fbc1-4a6e-b022-951f901be5a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1cf30d11-cb5d-4ff7-9c2d-f1b85e8db94e" name="Utente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="825692fc-b6f6-471c-a6ca-85b084ee845b" name="Lower" value="1">
+                      <elementDefinition Id="8365333d-2131-4e07-82a6-d74030bc367f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4f8212cd-3a36-4ab6-8a80-1cee841daac2" name="Upper" value=".*">
+                      <elementDefinition Id="080f9c0e-09b0-4ef1-aed1-4a98a4dfe7da" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2cd7f2b8-eecc-4888-bd24-01df48ec5c71" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="60d4b387-e7f3-43e3-b5ab-0b987dee887e" name="TextTemplateBindings" profile="TextTemplateBindings">
+                <elementDefinition Id="7520d82b-6077-44fa-979c-1b6880036186" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5fb978e3-7852-409f-b8ec-44bce72b11ab">
+                    <propertyInstance Id="f9a10dd3-54bf-428f-9f68-51978859196c" name="Alias">
+                      <elementDefinition Id="de8aaa58-7e74-452b-8691-13fe7a617d9b" />
+                    </propertyInstance>
+                    <elementDefinition Id="350b138a-362a-4ae9-a170-cb4b6396fcd3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d259115f-aa7f-4989-8229-14156b8552f8">
+                    <propertyInstance Id="7072120f-0334-4681-9b96-9b0640bd2b23" name="TemplateFilePath">
+                      <elementDefinition Id="592bbaa2-726d-4b0a-b0f7-508f96b4640c" />
+                    </propertyInstance>
+                    <elementDefinition Id="8cac938e-ec90-479c-8587-899ab098ba52" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b65b3465-81b7-4b3b-91a6-3e85f94ef04a">
+                    <propertyInstance Id="0c4e6260-555a-4718-addc-02362cbf9435" name="ProjectPath">
+                      <elementDefinition Id="7f471b9c-faaf-41f0-8a61-771499c9f4cc" />
+                    </propertyInstance>
+                    <elementDefinition Id="fd315179-8a48-4db0-935b-b4ecfe867432" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="704deb55-05bd-45c8-be0c-c2cf56c8a5e5">
+                    <propertyInstance Id="f4d17082-1192-4beb-b535-98965f948f32" name="TargetDirectory">
+                      <elementDefinition Id="7907cb66-a938-4b20-ae5f-2609c5d9317b" />
+                    </propertyInstance>
+                    <elementDefinition Id="07747972-1966-406c-b32e-bb1087a95cb6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e1bc8b96-79c1-4c39-9893-6ee5b94653b5">
+                    <propertyInstance Id="6904ec26-033b-4b22-8e73-b8b0c9d8b7de" name="TargetName">
+                      <elementDefinition Id="5fe2f056-203d-4a4c-99de-72ccc53493ec" />
+                    </propertyInstance>
+                    <elementDefinition Id="67919e62-4eb6-43e3-8259-eabf777b7248" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7bc5da98-2257-4e91-a84a-2e302c4712f7">
+                    <propertyInstance Id="c565d845-cce9-4148-92d8-e6974bb4bce2" name="Overwrite">
+                      <elementDefinition Id="6daf845c-d6f8-4f5d-90cf-7a1d907c70c6" />
+                    </propertyInstance>
+                    <elementDefinition Id="2d9f7fdc-c229-408c-8ef4-7b3bf0660320" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="72040b92-3cb2-42d3-a152-bd6e4489e78c">
+                    <propertyInstance Id="bf59d7aa-c5ed-42d7-bd94-ba924835df2e" name="Parameters">
+                      <elementDefinition Id="01ca0b27-f0bc-433e-8e59-3e1fbef86a68" />
+                    </propertyInstance>
+                    <elementDefinition Id="da7dbed0-b01e-4908-aabf-50823193cf84" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="950e431b-2b4b-4584-9296-65383eb554a1" />
+          </association>
+          <association Id="7e192b90-608d-4007-8430-8aef13586de8" isDerived="false" sourceEndRoleName="Medico" targetEndRoleName="Proficiencia" isLeaf="false" name="&quot;ter&quot;" isAbstract="false">
+            <classMoniker Id="35558013-4882-4d4c-bc90-4328241a4b5f" LastKnownName="Proficiencia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2f85d55-8f93-4617-8454-bbb3bbeb2a41" name="Medico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3768d7c6-0c94-436d-a9f7-54d24d1748e9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68a9894e-b073-4306-be87-f36b03374615" name="Proficiencia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="1f1359ad-8f39-48cd-81a4-26ef943d29c1" name="Lower" value="1">
+                      <elementDefinition Id="410d749e-3f0c-41a8-89e3-b0503407f1ac" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f4850bd4-5afb-45e0-8f54-2b6e340ef3c0" name="Upper" value=".*">
+                      <elementDefinition Id="bf2b7e61-00b7-4d8a-9648-4cf32ad6a310" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5aa664ef-18db-41d4-ada5-39df6d7a6a5f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="581e3e71-94aa-4691-82f1-a919a6a5446e" />
+          </association>
+          <association Id="5eb007fb-8a0f-48b0-8298-8f99585d86a0" isDerived="false" sourceEndRoleName="Medico" targetEndRoleName="Consulta" isLeaf="false" name="&quot;realizar&quot;" isAbstract="false">
+            <classMoniker Id="5d1d69b6-1c05-464a-8325-461c19766f93" LastKnownName="Consulta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c59d3f0c-fb31-490a-b012-14d3165b1f24" name="Medico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="898662c8-3e17-4955-869a-5148a104bbb3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="00ea1c43-fefc-446c-91a8-3f2847769e94" name="Consulta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="8e79224b-0b3b-4bae-8a88-8ff39e9b274a" name="Lower" value="*">
+                      <elementDefinition Id="53bccdeb-0999-49a4-ad4f-f2c742fecf5c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b1cf5089-e236-42d7-9412-64240f3cddc4" name="Upper" value="*">
+                      <elementDefinition Id="485cc288-a356-46fc-aee7-b1450e51338a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="56defa23-0814-4c0c-a28e-99e991b15945" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d0f9879c-ab20-4110-83c3-4b2e5290e8a1" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ce97c21d-02ac-4a47-9ddd-eaa334609e6a" name="proficiencia" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b1c637c2-84ae-4d86-990c-2940d1c31609" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9c7176c6-058b-46a2-80a6-cedbb9476e93" LastKnownName="Proficiencia" />
+            </type_NamedElement>
+          </property>
+          <property Id="2c4d6c8d-c6a2-4c9f-9209-6ee0cff2143d" name="numCedula" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c8c94505-49aa-4ec0-8db0-bd551147978f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e43525cd-9ee0-4682-9bef-ee53c01997ea" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="6a4a2a6a-5a06-4fd3-9a6e-cc5fb6611a96" name="nome" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de41ad2c-7f41-4757-863b-fc7f2ce24279" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ebdbc57c-b487-4e55-a5f1-a43fde52833e" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="0f8002dc-9939-49ec-ae73-3e9cdf14048a" name="nif" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b0cc925b-6cbe-48cd-8340-2c78402e57b6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2a123593-09b6-4662-bd4e-b78d171f0438" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="21649528-fc6c-40a5-9472-21db1a42341d" name="horaCheckIn" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f0ce74d5-2155-4e32-8248-d08717fd16ab" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2a123593-09b6-4662-bd4e-b78d171f0438" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="b95e4eb7-e099-48a9-9c9a-e1fa3c0531fd" name="horaCheckOut" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="57ef6d8b-a6b3-4a13-a7ac-114601392040" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2a123593-09b6-4662-bd4e-b78d171f0438" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a7e90fe5-c17c-4b28-bcb8-b4c29e55e2d8" name="HelpDesk Professional" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d7892c20-5988-4795-8750-9d688361a3be" />
+        <generalsInternal>
+          <generalization Id="047d1280-d3b1-4dd4-82b7-c936ec6c89b1" isSubstitutable="false">
+            <classMoniker Id="7db424f3-3e2c-4baa-bff5-87734b16b630" LastKnownName="Funcionario" />
+            <elementDefinition Id="845a495e-7847-4486-ab7e-41c97676f370" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="1e298ddb-b536-43c3-8328-7c858aeef96b" isDerived="false" sourceEndRoleName="HelpDesk Professional" targetEndRoleName="Proficiencia" isLeaf="false" name="&quot;gerir&quot;" isAbstract="false">
+            <classMoniker Id="35558013-4882-4d4c-bc90-4328241a4b5f" LastKnownName="Proficiencia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a9cba064-1e74-450a-9495-79f7a405c788" name="HelpDesk Professional" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="76545e1f-842b-40a6-a8f4-4d16ccce9e89" name="Lower" value="1">
+                      <elementDefinition Id="22f13b46-2432-46a7-9793-ac1e6849aac5" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a3dd4460-7925-47a0-bcf9-0db5244e00c2" name="Upper" value="1">
+                      <elementDefinition Id="68a8fe6f-1f68-4165-b225-99e5fbb231c2" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="12a662f4-efcd-4607-847f-7fcc0bbf3437" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ca8ca12-18da-439a-8b70-454fe9e50922" name="Proficiencia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="d37119e6-8d3f-4df4-86dc-52d12db43809" name="Lower" value="*">
+                      <elementDefinition Id="3db0f7a1-5dc4-4e4a-b7e1-e3de02336a20" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="17190f97-803a-4632-825d-64322eb6f7f9" name="Upper" value="*">
+                      <elementDefinition Id="9a68bb55-caae-43b4-b335-e4aa33406dd9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="fb27909a-970e-45df-9c55-cb839b3e1b57" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1cf3b16f-06f1-41f5-b3f7-9f5e0aafb83a" />
+          </association>
+          <association Id="d66aac5f-a225-4b66-9eab-111eca94a7a8" isDerived="false" sourceEndRoleName="HelpDesk Professional" targetEndRoleName="Utente" isLeaf="false" name="&quot;adicionar&quot;" isAbstract="false">
+            <classMoniker Id="d2d3d28e-6da2-45bd-9efd-a50318ea182e" LastKnownName="Utente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34974d62-dcf0-481e-8681-47d5964b9e03" name="HelpDesk Professional" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="03cf14d6-b0a9-4de5-a8aa-03fc0c9868a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="48650677-5e6a-4c58-b19e-5f367f965062" name="Utente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="d6faf6fc-d365-4d53-958b-e25c6cfaa091" name="Lower" value="1">
+                      <elementDefinition Id="3799f396-b54d-450c-a295-de685d9ee4c5" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2443cd1c-72ff-451c-b832-f3dacffd17b4" name="Upper" value=".*">
+                      <elementDefinition Id="142a5faa-3525-42dd-9f19-cb24df375a84" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="084660f4-4a21-4730-ac06-0d12062888be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83b164d5-79a2-4678-b230-3855e4341c1c" />
+          </association>
+          <association Id="eb1ab05d-c7fd-4385-a433-ae7cff6e71c7" isDerived="false" sourceEndRoleName="HelpDesk Professional" targetEndRoleName="Consulta" isLeaf="false" name="&quot;gerir&quot;" isAbstract="false">
+            <classMoniker Id="5d1d69b6-1c05-464a-8325-461c19766f93" LastKnownName="Consulta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c223927e-3af0-45f3-8d3b-d531afbb6c51" name="HelpDesk Professional" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="99b6aa1a-a319-454d-9b84-c127d5c6ae18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0d3c63ca-4550-4f74-a9a7-87e3c1cd9787" name="Consulta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="4bb3cc75-bb75-4a80-9645-9eb63b27a8ec" name="Lower" value="*">
+                      <elementDefinition Id="354021dd-574e-4989-a268-a7b68ee1c6c1" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="9f8a1834-9a96-4377-a009-77831aac3af1" name="Upper" value="*">
+                      <elementDefinition Id="21700534-0bff-4afc-b39b-1ba978988ac8" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0ea5c8fe-5881-4f6c-a9bc-a5ede76595a3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="44244347-b851-421c-82e4-e39e1a452f42" />
+          </association>
+          <association Id="00b70185-ab29-42f3-98f6-7a65dbe5c31b" isDerived="false" sourceEndRoleName="HelpDesk Professional" targetEndRoleName="Medico" isLeaf="false" name="&quot;registar&quot;" isAbstract="false">
+            <classMoniker Id="41ec5470-62be-4dbf-8e6f-65ee7f7549cb" LastKnownName="Medico" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28af1a21-79bf-49a1-bd2a-b34d4d019de8" name="HelpDesk Professional" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2f566281-ab4b-4e13-9d8e-4efdf0f19626" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="111fc67a-45ee-4608-a17d-7b69d1d17811" name="Medico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="4551157a-9766-4748-9049-63208401aa93" name="Lower" value="*">
+                      <elementDefinition Id="053b15df-6859-4b08-8b55-58fa15ecdb7c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="44f2db09-bab7-4c98-984b-2ec9df1cc8bc" name="Upper" value="*">
+                      <elementDefinition Id="d902bcb4-7e60-4a38-b266-c0bdad3ff73b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7022f05d-e76e-4424-b65f-ca313a83d585" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="88bdd9eb-696f-4b37-9a58-e2f02b4698eb" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5d1d69b6-1c05-464a-8325-461c19766f93" name="Consulta" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d6d68117-2545-498e-84db-5416ac8a8ae2" />
+        <ownedAttributesInternal>
+          <property Id="5a5e6139-ec0e-4262-b19c-e48a5c34125b" name="utente" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="daf618bf-915d-45d8-9b37-b48c6c86a976" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1f5e582-4643-4ec6-89a0-03899a01f70f" LastKnownName="Utente" />
+            </type_NamedElement>
+          </property>
+          <property Id="afe902d8-19ec-4ac8-9891-d827794d6206" name="medico" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="33dc248d-0017-4e35-8d56-a5d3f271babb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ac642dab-7ba9-4cad-a5f2-6e532bf43fc2" LastKnownName="Medico" />
+            </type_NamedElement>
+          </property>
+          <property Id="4e7ea482-183b-4746-a557-f742fbbdefe8" name="numero" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="62737491-8ea4-4ff5-8f0a-883528987190" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2a123593-09b6-4662-bd4e-b78d171f0438" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="35558013-4882-4d4c-bc90-4328241a4b5f" name="Proficiencia" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f2067e47-f221-4315-bb6e-36cf0b86baed" />
+        <ownedAttributesInternal>
+          <property Id="049507f0-2b4f-44c5-a291-2f95f3595fb2" name="id" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="43122dd8-d065-489f-8d20-20d8d66f4217" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bfbce0d2-0195-4748-87c3-e334e3e78d61" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="e5194fe3-a507-4e6b-96cb-bb7f98b65a0d" name="nome" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8f1e6dcf-095a-4e67-a67a-fab80a235b0a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d88bcec5-47e1-4344-b440-e6c427ad3c6c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="12d168e7-26b8-445f-81a2-f6bea676312b" name="descricao" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7a3b5e62-22d1-476d-a6fc-89f35f33cf21" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="870448e4-c1ea-41d7-8d29-9b6cf1a9410c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="2a123593-09b6-4662-bd4e-b78d171f0438" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e28fc7e1-9e3d-4eb6-9ff2-5f27896dbd62" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dc6aa7bb-9626-4a20-8773-6beba6046d97" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9c7176c6-058b-46a2-80a6-cedbb9476e93" name="Proficiencia" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Proficiencia">
+        <elementDefinition Id="f2067e47-f221-4315-bb6e-36cf0b86baed" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ac642dab-7ba9-4cad-a5f2-6e532bf43fc2" name="Medico" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Medico">
+        <elementDefinition Id="e459c936-6d4e-4a68-b3e0-57a7336f66c6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b1f5e582-4643-4ec6-89a0-03899a01f70f" name="Utente" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Utente">
+        <elementDefinition Id="3f42c7b1-91b7-4002-aff2-3ade9b2cbcad" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c43b2f2b-c6ab-4258-8b5a-ad2c58f946f1" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f67efac3-6668-440a-8f53-a79087e2eccb" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2e97fab5-beec-4240-bbe5-e9f470608ce2" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c5d64ed5-704b-4f25-9c18-7d961b579ceb" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bfbce0d2-0195-4748-87c3-e334e3e78d61" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d88bcec5-47e1-4344-b440-e6c427ad3c6c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="870448e4-c1ea-41d7-8d29-9b6cf1a9410c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ebdbc57c-b487-4e55-a5f1-a43fde52833e" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e43525cd-9ee0-4682-9bef-ee53c01997ea" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="cce63f35-decc-4596-b23a-b5c28268d367" name="ModelingProject1">
+    <elementDefinition Id="d494ef71-2bda-4475-96b6-90641dcea574" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7aa85e20-e484-4b38-bc17-9e20fd6285a9">
+        <profileInstance Id="beb4bf4e-3cd7-4011-b0c3-ac0a7fa2d0d8" name="TextTemplateBindings">
+          <elementDefinition Id="1679aaf7-f3d8-4e4f-a540-dab5d02c247b" />
+        </profileInstance>
+        <elementDefinition Id="33f32ba7-eaf2-45fb-a256-1aa91d9bd47c" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

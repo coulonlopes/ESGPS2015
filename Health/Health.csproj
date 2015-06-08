@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7716CD8A-658A-4D7A-AE62-1E6AB6823047}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Health</RootNamespace>
+    <AssemblyName>Health</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MenuMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMedico.Designer.cs">
+      <DependentUpon>MenuMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisarProficiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesquisarProficiencia.Designer.cs">
+      <DependentUpon>PesquisarProficiencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarConsulta.Designer.cs">
+      <DependentUpon>AdicionarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarMedico.Designer.cs">
+      <DependentUpon>AdicionarMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarProficiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarProficiencia.Designer.cs">
+      <DependentUpon>AdicionarProficiencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarUtente.Designer.cs">
+      <DependentUpon>AdicionarUtente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealizarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizarConsulta.Designer.cs">
+      <DependentUpon>RealizarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpdeskMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpdeskMenu.Designer.cs">
+      <DependentUpon>HelpdeskMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskMenuMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpDeskMenuMed.Designer.cs">
+      <DependentUpon>HelpDeskMenuMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskMenuUtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpDeskMenuUtt.Designer.cs">
+      <DependentUpon>HelpDeskMenuUtt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistarUtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistarUtt.Designer.cs">
+      <DependentUpon>RegistarUtt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MenuMedico.resx">
+      <DependentUpon>MenuMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisarProficiencia.resx">
+      <DependentUpon>PesquisarProficiencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarConsulta.resx">
+      <DependentUpon>AdicionarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarMedico.resx">
+      <DependentUpon>AdicionarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarProficiencia.resx">
+      <DependentUpon>AdicionarProficiencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarUtente.resx">
+      <DependentUpon>AdicionarUtente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizarConsulta.resx">
+      <DependentUpon>RealizarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpdeskMenu.resx">
+      <DependentUpon>HelpdeskMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpDeskMenuMed.resx">
+      <DependentUpon>HelpDeskMenuMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpDeskMenuUtt.resx">
+      <DependentUpon>HelpDeskMenuUtt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistarUtt.resx">
+      <DependentUpon>RegistarUtt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary.csproj">
+      <Project>{4ea99faf-32a7-4611-893b-0c27cdf2517e}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
