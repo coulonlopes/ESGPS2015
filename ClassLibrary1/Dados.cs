@@ -263,5 +263,32 @@ namespace ClassLibrary1
             return res;
 
         }
+
+        public void RegistarUtt(UtenteClass ut)
+        {
+            Utente u = new Utente();
+            u.BICC = ut.BICC1;
+            u.Nome = ut.Nome;
+            u.Sns = ut.Sns;
+            u.Telefone = ut.Telefone;
+            u.Morada = ut.Morada;
+            u.CodigoPostal = ut.Cp;
+
+            model.Utentes.Add(u);
+            model.SaveChanges();
+        }
+
+        public void AdicionarConsulta(Consulta consulta)
+        {
+            Consulta c = new Consulta();
+            consulta.Utente.Nome = c.Utente.Nome;
+            consulta.Utente.Sns = c.Utente.Sns;
+            consulta.Medico.Nome = c.Medico.Nome;
+            consulta.Medico.Proficiencia = c.Medico.Proficiencia;
+
+            model.Consultas.Add(c);
+            model.SaveChanges();
+
+        }
     }
 }

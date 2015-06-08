@@ -25,6 +25,9 @@ namespace ClassLibrary1
         public System.DateTime DataNasc { get; set; }
         public int Sns { get; set; }
         public int MedicoId { get; set; }
+        public int BICC { get; set; }
+        public int CodigoPostal { get; set; }
+        public int Telefone { get; set; }
     
         public virtual Medico Medico { get; set; }
         public virtual ICollection<Consulta> Consultas { get; set; }
