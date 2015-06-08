@@ -13,6 +13,7 @@ namespace Health
 {
     public partial class AdicionarConsulta : Form
     {
+        //isto trabalha????
         int sns;
         public AdicionarConsulta()
         {
