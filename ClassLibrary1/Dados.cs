@@ -83,12 +83,62 @@ namespace ClassLibrary1
             return medicos;
         }
 
-        //public Medico getMedico(string nomeMedico)
-        //{
-        //    Medico m = model.Medicos.Where(i=> i.Nome== nomeMedico).First();
-        //    return m;
+        public void actualizaConsulta(int idConsulta, DateTime d, string nomeMedico)
+        {
+            Medico med = model.Medicos.Where(i => i.Nome == nomeMedico).First();
+            Consulta c = getConsulta(idConsulta);
 
-        //}
+            c.Data = d;
+            c.Medico = med;
+            c.Estado = "AL";
+            model.SaveChanges();
+
+        }
+
+        public void cancelarConsulta(int id)
+        {
+           
+                Consulta c = model.Consultas.Where(i => i.Id == id).First();
+            
+                c.Estado = "C";
+                model.SaveChanges();
+            
+
+
+            
+
+        }
+
+        public List<Medico> getAllmedicos()
+        {
+            List<Medico> allmedicos = model.Medicos.ToList();
+            return allmedicos;
+        }
+
+        public void RegistarUtt(string nomeUtente, int bicc, DateTime dataNasc, int sns, int cp, int telefone, string morada, string medico)
+        {
+           
+            Utente u = new Utente();
+
+            u.BICC = bicc;
+            u.Nome = nomeUtente;
+            u.Sns = sns;
+            u.Telefone = telefone;
+            u.Morada = morada;
+            u.CodigoPostal = cp;
+            u.Medico = model.Medicos.Where(i => i.Nome == medico).First();;
+            model.Utentes.Add(u);
+            model.SaveChanges();
+        }
+
+        public int idUltUtente()
+        {
+            List<Utente> listaU = model.Utentes.ToList();
+            Utente u = listaU.Last();
+            int n = u.Id;
+
+            return n;
+        }
 
 
         public static string AdicionarProficiencia(ProficienciaClass proficiencia)
@@ -302,7 +352,6 @@ namespace ClassLibrary1
             model.SaveChanges();
         }
 
-<<<<<<< HEAD
         public void AdicionarConsulta(string nomeMedico , DateTime data, int sns)
         {
          Medico m = model.Medicos.Where(i=> i.Nome== nomeMedico).First();
@@ -317,19 +366,12 @@ namespace ClassLibrary1
             c.Diagnostico = " ";
             c.Sintomas = " ";
            
-=======
-        public void AdicionarConsulta(Consulta consulta)
-        {
-            Consulta c = new Consulta();
-            consulta.Utente.Nome = c.Utente.Nome;
-            consulta.Utente.Sns = c.Utente.Sns;
-            consulta.Medico.Nome = c.Medico.Nome;
-            consulta.Medico.Proficiencia = c.Medico.Proficiencia;
->>>>>>> 5f5ce4486342cf00b64b5a37bceb4246eb06fb7a
 
             model.Consultas.Add(c);
             model.SaveChanges();
 
         }
+
+        
     }
 }

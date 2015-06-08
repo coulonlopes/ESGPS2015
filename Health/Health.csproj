@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarUtente.designer.cs">
+      <DependentUpon>AdicionarUtente.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +87,6 @@
     </Compile>
     <Compile Include="AdicionarProficiencia.Designer.cs">
       <DependentUpon>AdicionarProficiencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdicionarUtente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdicionarUtente.Designer.cs">
-      <DependentUpon>AdicionarUtente.cs</DependentUpon>
     </Compile>
     <Compile Include="RealizarConsulta.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,15 @@
     <Compile Include="RegistarUtt.Designer.cs">
       <DependentUpon>RegistarUtt.cs</DependentUpon>
     </Compile>
+    <Compile Include="VizualizarDetalhes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VizualizarDetalhes.Designer.cs">
+      <DependentUpon>VizualizarDetalhes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdicionarUtente.resx">
+      <DependentUpon>AdicionarUtente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuMedico.resx">
       <DependentUpon>MenuMedico.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdicionarProficiencia.resx">
       <DependentUpon>AdicionarProficiencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdicionarUtente.resx">
-      <DependentUpon>AdicionarUtente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RealizarConsulta.resx">
       <DependentUpon>RealizarConsulta.cs</DependentUpon>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="RegistarUtt.resx">
       <DependentUpon>RegistarUtt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VizualizarDetalhes.resx">
+      <DependentUpon>VizualizarDetalhes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

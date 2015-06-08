@@ -15,11 +15,17 @@ namespace Health
     {
         int sns;
         Dados d = new Dados();
+        Consulta c;
         public AdicionarConsulta()
         {
             InitializeComponent();
         }
 
+        public AdicionarConsulta(Consulta c)
+        {
+            InitializeComponent();
+            this.c = c;
+        }
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -28,7 +34,7 @@ namespace Health
         private void AdicionarConsulta_Load(object sender, EventArgs e)
         {
            
-
+          
             sns = Health.Properties.Settings.Default.SNS;
             Utente u = d.getUtente(sns);
             textBox1.Text = u.Nome;
@@ -86,6 +92,11 @@ namespace Health
             data = data.Date + ts;
 
             d.AdicionarConsulta(nomeMedico, data, sns);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

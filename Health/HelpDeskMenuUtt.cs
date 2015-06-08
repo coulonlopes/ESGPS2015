@@ -65,7 +65,8 @@ namespace Health
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AdicionarUtente ut = new AdicionarUtente();
+            ut.ShowDialog();
         }
 
         private void efetuarMarcaçãoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,6 +131,21 @@ namespace Health
              lv1.SubItems.Add(c.Utente.Nome.ToString());
              listView2.Items.Add(lv1);
             
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            int idConsulta= Convert.ToInt32( listView1.SelectedItems[0].Text);
+            Consulta c = dados.getConsulta(idConsulta);
+
+            VizualizarDetalhes ad = new VizualizarDetalhes(c);
+            ad.ShowDialog();
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

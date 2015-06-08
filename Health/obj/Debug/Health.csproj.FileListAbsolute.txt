@@ -186,20 +186,6 @@ C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\ClassLibrary1.pdb
 C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\EntityFramework.xml
 C:\Users\July\Desktop\ESGPS2015\Health\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.MenuMedico.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.PesquisarProficiencia.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarConsulta.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarMedico.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarProficiencia.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarUtente.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.Form1.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.HelpdeskMenu.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.HelpDeskMenuMed.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.HelpDeskMenuUtt.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.LogIn.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.Properties.Resources.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.RegistarUtt.resources
-C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.csproj.GenerateResource.Cache
 C:\Users\Suporte DEI\Desktop\EGPS\Health\bin\Debug\Health.exe.config
 C:\Users\Suporte DEI\Desktop\EGPS\Health\bin\Debug\Health.exe
 C:\Users\Suporte DEI\Desktop\EGPS\Health\bin\Debug\Health.pdb
@@ -210,5 +196,20 @@ C:\Users\Suporte DEI\Desktop\EGPS\Health\bin\Debug\ClassLibrary1.pdb
 C:\Users\Suporte DEI\Desktop\EGPS\Health\bin\Debug\EntityFramework.xml
 C:\Users\Suporte DEI\Desktop\EGPS\Health\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.csprojResolveAssemblyReference.cache
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarUtente.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.MenuMedico.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.PesquisarProficiencia.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarConsulta.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarMedico.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.AdicionarProficiencia.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.Form1.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.HelpdeskMenu.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.HelpDeskMenuMed.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.HelpDeskMenuUtt.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.LogIn.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.Properties.Resources.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.RegistarUtt.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.VizualizarDetalhes.resources
+C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.csproj.GenerateResource.Cache
 C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.exe
 C:\Users\Suporte DEI\Desktop\EGPS\Health\obj\Debug\Health.pdb

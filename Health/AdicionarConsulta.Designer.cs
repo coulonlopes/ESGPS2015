@@ -39,6 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textMin = new System.Windows.Forms.TextBox();
+            this.textHora = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,10 +55,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textHora = new System.Windows.Forms.TextBox();
-            this.textMin = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -182,6 +182,39 @@
             this.groupBox3.Text = "Dados da Consulta";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(606, 33);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 17);
+            this.label10.TabIndex = 17;
+            this.label10.Text = ":";
+            // 
+            // textMin
+            // 
+            this.textMin.Location = new System.Drawing.Point(620, 30);
+            this.textMin.Name = "textMin";
+            this.textMin.Size = new System.Drawing.Size(35, 23);
+            this.textMin.TabIndex = 16;
+            // 
+            // textHora
+            // 
+            this.textHora.Location = new System.Drawing.Point(570, 30);
+            this.textHora.Name = "textHora";
+            this.textHora.Size = new System.Drawing.Size(35, 23);
+            this.textHora.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(530, 31);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 17);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Hora:";
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -219,6 +252,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Cancelar Consulta";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // dateTimePicker1
             // 
@@ -238,6 +272,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // textBox7
             // 
@@ -287,6 +322,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Voltar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -298,39 +334,6 @@
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(530, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 17);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Hora:";
-            // 
-            // textHora
-            // 
-            this.textHora.Location = new System.Drawing.Point(570, 30);
-            this.textHora.Name = "textHora";
-            this.textHora.Size = new System.Drawing.Size(35, 23);
-            this.textHora.TabIndex = 15;
-            // 
-            // textMin
-            // 
-            this.textMin.Location = new System.Drawing.Point(620, 30);
-            this.textMin.Name = "textMin";
-            this.textMin.Size = new System.Drawing.Size(35, 23);
-            this.textMin.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(606, 33);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 17);
-            this.label10.TabIndex = 17;
-            this.label10.Text = ":";
             // 
             // AdicionarConsulta
             // 
